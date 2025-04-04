@@ -5,22 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Random Cat Facts</title>
     <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
 </head>
 <body>
     <h1>🐱 Random Cat Facts 🐱</h1>
     <div id="fact-container">Click the button to get a cat fact!</div>
     <button onclick="fetchCatFact()">Get New Cat Fact</button>
-
-    <script>
-        async function fetchCatFact() {
-            try {
-                const response = await fetch('https://catfact.ninja/fact');
-                const data = await response.json();
-                document.getElementById('fact-container').textContent = data.fact;
-            } catch (error) {
-                document.getElementById('fact-container').textContent = 'Oops! Failed to fetch a cat fact. Please try again.';
-            }
-        }
-    </script>
+    <button id="back-button" onclick="goBack()">Back To Homepage</button>
 </body>
 </html>
