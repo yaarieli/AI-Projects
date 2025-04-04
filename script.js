@@ -27,6 +27,7 @@ async function updateCounter() {
       },
       body: JSON.stringify({ count }),
     });
+    console.log("Counter updated successfully:", count);
   } catch (error) {
     console.error("Error updating counter:", error);
   }
