@@ -32,6 +32,6 @@ async function updateCounter() {
     console.error("Error updating counter:", error);
   }
 }
-
-// Call updateCounter on script load
-updateCounter();
+document.addEventListener("DOMContentLoaded", function () {
+  updateCounter();
+});
